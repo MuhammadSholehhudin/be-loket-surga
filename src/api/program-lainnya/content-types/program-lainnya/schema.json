@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "program_lainnyas",
+  "info": {
+    "singularName": "program-lainnya",
+    "pluralName": "program-lainnyas",
+    "displayName": "ProgramLainnya",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "pictures": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "donations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::donation.donation",
+      "mappedBy": "program_lainnya"
+    }
+  }
+}

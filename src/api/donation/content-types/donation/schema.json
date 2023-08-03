@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "donations",
+  "info": {
+    "singularName": "donation",
+    "pluralName": "donations",
+    "displayName": "Donation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "donation": {
+      "type": "biginteger"
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "email": {
+      "type": "email"
+    },
+    "doa": {
+      "type": "richtext"
+    },
+    "donation_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::danation-category.danation-category",
+      "inversedBy": "donations"
+    },
+    "program_lainnya": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::program-lainnya.program-lainnya",
+      "inversedBy": "donations"
+    }
+  }
+}

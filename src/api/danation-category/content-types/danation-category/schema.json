@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "danation_categories",
+  "info": {
+    "singularName": "danation-category",
+    "pluralName": "danation-categories",
+    "displayName": "donationCategory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "donations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::donation.donation",
+      "mappedBy": "donation_category"
+    },
+    "pictures": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
